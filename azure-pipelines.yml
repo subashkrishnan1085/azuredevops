@@ -39,7 +39,6 @@ stages:
         
 - stage: Deploy
   displayName: Deploy to Dev
-  environment: 'subashk8scluster.default'
   dependsOn: Build
   variables:
     acrsecret: k8sexamplesacrauth
@@ -48,6 +47,7 @@ stages:
   jobs:
   - deployment: Deploy
     displayName: Deploy to AKS
+    environment: 'subashk8scluster.default'
     pool: 
       vmImage: ubuntu-latest
     strategy:
