@@ -39,6 +39,7 @@ stages:
         
 - stage: Deploy
   displayName: Deploy to Dev
+  environment: 'subashk8scluster.default'
   dependsOn: Build
   variables:
     acrsecret: k8sexamplesacrauth
