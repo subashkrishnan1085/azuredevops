@@ -47,7 +47,7 @@ stages:
   jobs:
   - deployment: Deploy
     displayName: Deploy to AKS
-    environment: 'subashk8scluster.default'
+    environment: 'k8sdev.default'
     pool: 
       vmImage: ubuntu-latest
     strategy:
